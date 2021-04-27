@@ -1,0 +1,115 @@
+:root{
+    --orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+    --white-p: hsla(0, 0%, 100%, 0.75);
+    --light-gray-b: hsl(0, 0%, 95%);
+}
+
+body{
+    background-color: var(--light-gray-b);
+    display: flex;
+    justify-content: center;
+    padding:3rem;
+}
+
+.attribution{
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 2rem;
+    position: absolute;
+}
+.attribution a{
+    display: inline-block;
+    color: var(--dark-cyan);
+    text-decoration: underline dotted var(--dark-cyan);
+    transform: translateY(0px);
+    transition: transform 0.3s ease-in-out;
+}
+.attribution a:hover{
+    color: var(--very-dark-cyan);
+    text-decoration-color: var(--very-dark-cyan);
+    transform: translateY(-5px);
+}
+
+.content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 3rem;
+}
+.section{
+    display: grid;
+    grid-template-rows: 1fr 1fr 4fr 1fr;
+    height: 60vh;
+    padding:2rem;
+    width:18vw;
+}
+.section p{
+    color: var(--white-p);
+    font-family: 'Lexend Deca', sans-serif;
+    font-size:0.9rem;
+    line-height: 2;
+    width: 82%;
+}
+.section h1{
+    color: var(--light-gray-b);
+    font-family: 'Big Shoulders Display', cursive;
+}
+.section button{
+    background-color: var(--light-gray-b);
+    border: none;
+    border-radius: 3rem;
+    cursor: pointer;
+    font-family: 'Lexend Deca', sans-serif;
+    outline: none;
+    padding: 1rem 2rem;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: transparent;
+}
+.section button:hover{
+    background-color: rgba(0,0,0,0);
+    border: 2px solid var(--light-gray-b);
+    color: var(--light-gray-b);
+}
+
+.section *{
+    margin: 1rem 0 0 1rem;
+}
+.orange{
+    background-color: var(--orange);
+    border-radius: 7px 0 0 7px;
+}
+.orange button{
+    color: var(--orange);
+}
+.dark-cyan{
+    background-color: var(--dark-cyan);
+}
+.dark-cyan button{
+    color: var(--dark-cyan);
+}
+.very-dark-cyan{
+    background-color: var(--very-dark-cyan);
+    border-radius: 0 7px 7px 0;
+}
+.very-dark-cyan button{
+    color: var(--very-dark-cyan);
+}
+
+@media screen and (max-width:880px) {
+    .section{
+        width: 100%;
+    }
+    .section *{
+        margin: 0.5rem 0 0 0.5rem;
+    }
+    .section p{
+        width: 100%;
+    }
+    .orange{
+        border-radius: 7px 7px 0 0;
+    }
+    .very-dark-cyan{
+        border-radius: 0 0 7px 7px;
+    }
+}
